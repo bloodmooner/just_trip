@@ -1,0 +1,65 @@
+.about {
+    min-height: 900px;
+    padding-top: 190px;
+    background: url('../../img/about/about_bg.png') no-repeat 50%/cover;
+    &__wrapper {
+        display: grid;
+        grid-template-columns: 1065px 240px;
+        justify-content: space-between;
+    }
+    &__title {
+        font-weight: 700;
+        font-size: 48px;
+        color: #333333;
+        span {
+            color: #FF7474;
+        }
+    }
+    &__text {
+        margin-top: 35px;
+        display: grid;
+        grid-template-columns: repeat(2, 513px);
+        justify-content: space-between;
+        div {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 20px;
+            font-weight: 500;
+            color: #000000;
+            line-height: 40px;
+        }
+    }
+    &__statistic {
+        margin-top: 80px;
+        display: grid;
+        grid-template-columns: repeat(4, 237px);
+        justify-content: space-between;
+    }
+    &__number {
+        font-weight: 700;
+        color: #FF7474;
+        font-size: 48PX;
+    }
+    &__caption {
+        margin-top: 10px;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 30px;
+    }
+    &__history {
+        &-wrapper {
+            margin-top: 120px;
+            position: relative;
+        }
+    }
+    &__name {
+        position: absolute;
+        top: 70px;
+        left: 80px;
+        font-family: 'Montserrat', sans-serif;
+        width: 170px;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 30px;
+    }
+}
