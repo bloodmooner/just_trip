@@ -11,6 +11,19 @@
             background: url('../../img/mikli-img.png') no-repeat 50%/cover; 
             position: relative;
         }
+        @include for-desktop-up {
+            grid-template-columns: 2fr 1fr;
+            column-gap: 60px;
+        }
+        @include for-tablet-landscape-up {
+            grid-template-columns: 1fr;
+            padding-top: 40px;
+        }
+        @include for-tablet-portrait-up {
+            grid-template-columns: 1fr;
+            padding-top: 40px;
+        }
+        
     }
     &__wrapper {
         position: absolute;
@@ -37,6 +50,14 @@
     &__subwrapper {
         padding-top: 60px;
         width: 403px;
+        @include for-tablet-landscape-up {
+            margin: 0 auto;
+            padding-top: 30px;
+        }
+        @include for-tablet-portrait-up {
+            margin: 0 auto;
+            padding-top: 30px;
+        }
     }
     &__title {
 

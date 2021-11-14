@@ -7,6 +7,12 @@
         grid-template-columns: 175px 640px 175px;
         justify-content: space-between;
         align-items: center;
+        @include for-tablet-landscape-up {
+            grid-template-columns: 175px 100px;
+        }
+        @include for-tablet-portrait-up {
+            grid-template-columns: 175px 100px;
+        }
     }
     &__logo {
         display: flex;
@@ -25,6 +31,12 @@
                 font-size: 18px;
                 margin-bottom: 0;
             }
+        }
+        @include for-tablet-landscape-up {
+            display: none;
+        }
+        @include for-tablet-portrait-up {
+            display: none;
         }
     }
     &__lang {
@@ -52,12 +64,27 @@
         display: grid;
         grid-template-columns: 875px 442px;
         justify-content: space-between;
-
+        @include for-desktop-up {
+            grid-template-columns: 2fr 1fr;
+        }
+        @include for-tablet-landscape-up {
+            margin-top: 140px;
+            grid-template-columns: 1fr;
+        }
     }
     &__title {
         color: #ffffff;
         width: 872px;
         text-align: left;
+        @include for-desktop-up {
+            width: 100%;
+            font-size: 60px;
+            line-height: 85px;
+        }
+        @include for-tablet-landscape-up {
+            width: 100%;
+
+        }
     }
     &__subtitle {
         margin-top: 20px;
@@ -70,12 +97,28 @@
     }
     &__arrow {
         margin-top: 150px;
+        @include for-tablet-landscape-up {
+            margin-top: 90px;
+        }
     }
     &__videos {
         position: relative;
         &-wrapper {
             position: absolute;
             bottom: -180px;
+            @include for-desktop-up {
+                width: 100%;
+            }
+            @include for-tablet-landscape-up {
+                bottom: initial;
+                width: 100%;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                column-gap: 30px;
+            }
+        }
+        @include for-tablet-landscape-up {
+            margin-top: 105px;
         }
     }
     &__item {
@@ -89,6 +132,12 @@
         &:nth-child(2) {
             background: url('../../img/header/video2.png') no-repeat 50%/cover;
             margin-bottom: 0px;
+        }
+        @include for-desktop-up {
+            width: 100%;
+        }
+        @include for-tablet-landscape-up {
+            width: 100%;
         }
     }
     &__descr {

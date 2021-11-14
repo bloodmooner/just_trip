@@ -5,6 +5,12 @@
 
     &__wrapper {
         padding-top: 410px;
+        @include for-tablet-landscape-up {
+            padding-top: 245px;
+        }
+        @include for-tablet-portrait-up {
+            padding-top: 245px;
+        }
     }
     &__head {
         width: 615px;
@@ -13,6 +19,12 @@
         grid-template-rows: 60px;
         justify-content: space-between;
         align-items: center;
+        @include for-tablet-landscape-up {
+            width: 100%;
+        }
+        @include for-tablet-portrait-up {
+            width: 100%;
+        }
     }
     &__bottom {
         width: 100%;
@@ -22,6 +34,12 @@
         grid-template-rows: 30px;
         justify-content: space-between;
         align-items: center;
+        @include for-tablet-landscape-up {
+            grid-template-columns: 1fr;
+        }
+        @include for-tablet-portrait-up {
+            grid-template-columns: 1fr;
+        }
     }
     &__logo {
         font-weight: 400;
@@ -65,5 +83,19 @@
     &__social {
         display: flex;
         justify-content: space-between;
+        @include for-tablet-landscape-up {
+            width: 200px;
+            margin: 40px auto 0px auto;
+        }
+        @include for-tablet-portrait-up {
+            width: 200px;
+            margin: 40px auto 0px auto;
+        }
+    }
+    @include for-tablet-landscape-up {
+        min-height: 500px;
+    }
+    @include for-tablet-portrait-up {
+        min-height: 500px;
     }
 }

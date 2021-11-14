@@ -6,6 +6,17 @@
         display: grid;
         grid-template-columns: 1065px 240px;
         justify-content: space-between;
+        @include for-desktop-up {
+            grid-template-columns: 840px 250px;
+            justify-content: initial;
+            column-gap: 60px;
+        }
+        @include for-tablet-landscape-up {
+            grid-template-columns: 1fr;
+        }
+        @include for-tablet-portrait-up {
+            grid-template-columns: 1fr;
+        }
     }
     &__title {
         font-weight: 700;
@@ -27,12 +38,39 @@
             color: #000000;
             line-height: 40px;
         }
+        @include for-desktop-up {
+            grid-template-columns: repeat(2, 400px);
+            justify-content: initial;
+            column-gap: 30px;
+        }
+        @include for-tablet-landscape-up {
+            grid-template-columns: 1fr;
+        }
+        @include for-tablet-portrait-up {
+            grid-template-columns: 1fr;
+        }
+    }
+    &__descr {
+        @include for-tablet-landscape-up {
+            grid-column: 1 / 4;
+        }
+        @include for-tablet-portrait-up {
+            grid-column: 1 / 4;
+        }
     }
     &__statistic {
         margin-top: 80px;
         display: grid;
         grid-template-columns: repeat(4, 237px);
         justify-content: space-between;
+        @include for-tablet-landscape-up {
+            grid-template-columns: repeat(2, 1fr);
+            margin-top: 30px;
+        }
+        @include for-tablet-portrait-up {
+            grid-template-columns: repeat(2, 1fr);
+            margin-top: 30px;
+        }
     }
     &__number {
         font-weight: 700;
@@ -50,6 +88,12 @@
         &-wrapper {
             margin-top: 120px;
             position: relative;
+            @include for-tablet-landscape-up {
+                margin-top: 30px;
+            }
+            @include for-tablet-portrait-up {
+                margin-top: 30px;
+            }
         }
     }
     &__name {
@@ -61,5 +105,8 @@
         font-weight: 500;
         font-size: 20px;
         line-height: 30px;
+    }
+    @include for-tablet-landscape-up {
+        padding-top: 150px;
     }
 }
