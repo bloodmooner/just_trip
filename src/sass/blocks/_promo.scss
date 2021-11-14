@@ -13,9 +13,15 @@
         @include for-tablet-portrait-up {
             grid-template-columns: 175px 100px;
         }
+        @include for-phone-only {
+            grid-template-columns: 1fr;
+        }
     }
     &__logo {
         display: flex;
+        @include for-phone-only {
+            font-size: 30px;
+        }
     }
     &__menu {
         ul {
@@ -38,6 +44,9 @@
         @include for-tablet-portrait-up {
             display: none;
         }
+        @include for-phone-only {
+            display: none;
+        }
     }
     &__lang {
         position: relative;
@@ -58,6 +67,9 @@
         &-en {
             color: #808080;
         }
+        @include for-phone-only {
+            display: none;
+        }
     }
     &__wrapper {
         margin-top: 230px;
@@ -72,6 +84,10 @@
             grid-template-columns: 1fr;
         }
         @include for-tablet-portrait-up {
+            margin-top: 80px;
+            grid-template-columns: 1fr;
+        }
+        @include for-phone-only {
             margin-top: 80px;
             grid-template-columns: 1fr;
         }
@@ -93,8 +109,9 @@
             text-align: center;
         }
         @include for-phone-only {
-            width: 100%;
+            width: 290px;
             text-align: center;
+            font-size: 30px;
         }
     }
     &__subtitle {
@@ -116,6 +133,7 @@
             margin: 30px auto 0px auto;
         }
         @include for-phone-only {
+            width: 100%;
             display: block;
             margin: 30px auto 0px auto;
         }
@@ -130,8 +148,9 @@
             display: flex;
         }
         @include for-phone-only {
-            margin-top: 60px;
+            margin-top: 45px;
             display: flex;
+            justify-content: center;
         }
     }
     &__videos {
@@ -156,12 +175,21 @@
                 grid-template-columns: 1fr;
                 column-gap: 30px;
             }
+            @include for-phone-only {
+                bottom: initial;
+                width: 100%;
+                display: grid;
+                grid-template-columns: 1fr;
+            }
         }
         @include for-tablet-landscape-up {
             margin-top: 105px;
         }
         @include for-tablet-portrait-up {
             margin-top: 45px;
+        }
+        @include for-phone-only {
+            margin-top: 30px;
         }
     }
     &__item {
@@ -188,6 +216,12 @@
                 display: none;
             }
         }
+        @include for-phone-only {
+            width: 100%;
+            &:nth-child(2) {
+                display: none;
+            }
+        }
     }
     &__descr {
         position: absolute;
@@ -198,6 +232,10 @@
         grid-template-rows: 60px;
         align-items: center;
         column-gap: 15px;
+        @include for-phone-only {
+            grid-template-columns: 0.25fr 2fr;
+            left: 20px;
+        }
     }
     &__img {
         width: 32px;
@@ -218,5 +256,8 @@
         font-weight: 400;
         font-size: 18px;
         color: #ffffff;
+    }
+    @include for-phone-only {
+        min-height: 890px;
     }
 }

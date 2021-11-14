@@ -11,6 +11,9 @@
         @include for-tablet-portrait-up {
             padding-top: 80px;
         }
+        @include for-phone-only {
+            padding-top: 80px;
+        }
     }
     &__head {
         width: 615px;
@@ -48,6 +51,11 @@
         }
         @include for-tablet-portrait-up {
             grid-template-columns: 1fr;
+        }
+        @include for-phone-only {
+            grid-template-columns: 1fr;
+            grid-template-rows: auto;
+            margin-top: 20px;
         }
     }
     &__logo {
@@ -98,10 +106,19 @@
                 @include for-tablet-portrait-up {
                     font-size: 17px;
                 }
+                @include for-phone-only {
+                    font-size: 17px;
+                    text-align: center;
+                }
             }
             @include for-tablet-portrait-up {
                 display: grid;
                 grid-template-columns: repeat(2, 1fr);
+            }
+            @include for-phone-only {
+                display: grid;
+                grid-template-columns: 1fr;
+                row-gap: 15px;
             }
         }
         
@@ -117,11 +134,17 @@
             width: 200px;
             margin: 40px auto 0px auto;
         }
+        @include for-phone-only {
+            padding: 30px;
+        }
     }
     @include for-tablet-landscape-up {
         min-height: 500px;
     }
     @include for-tablet-portrait-up {
+        min-height: 400px;
+    }
+    @include for-phone-only {
         min-height: 400px;
     }
 }
