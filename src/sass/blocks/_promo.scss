@@ -71,6 +71,10 @@
             margin-top: 140px;
             grid-template-columns: 1fr;
         }
+        @include for-tablet-portrait-up {
+            margin-top: 80px;
+            grid-template-columns: 1fr;
+        }
     }
     &__title {
         color: #ffffff;
@@ -83,7 +87,14 @@
         }
         @include for-tablet-landscape-up {
             width: 100%;
-
+        }
+        @include for-tablet-portrait-up {
+            width: 100%;
+            text-align: center;
+        }
+        @include for-phone-only {
+            width: 100%;
+            text-align: center;
         }
     }
     &__subtitle {
@@ -91,14 +102,36 @@
         font-family: 'Montserrat', sans-serif;
         font-weight: 400;
         color: #ffffff;
+        @include for-tablet-portrait-up {
+            text-align: center;
+        }
+        @include for-phone-only {
+            text-align: center;
+        }
     }
     &__btn {
         margin-top: 60px;
+        @include for-tablet-portrait-up {
+            display: block;
+            margin: 30px auto 0px auto;
+        }
+        @include for-phone-only {
+            display: block;
+            margin: 30px auto 0px auto;
+        }
     }
     &__arrow {
         margin-top: 150px;
         @include for-tablet-landscape-up {
             margin-top: 90px;
+        }
+        @include for-tablet-portrait-up {
+            margin-top: 60px;
+            display: flex;
+        }
+        @include for-phone-only {
+            margin-top: 60px;
+            display: flex;
         }
     }
     &__videos {
@@ -116,9 +149,19 @@
                 grid-template-columns: 1fr 1fr;
                 column-gap: 30px;
             }
+            @include for-tablet-portrait-up {
+                bottom: initial;
+                width: 100%;
+                display: grid;
+                grid-template-columns: 1fr;
+                column-gap: 30px;
+            }
         }
         @include for-tablet-landscape-up {
             margin-top: 105px;
+        }
+        @include for-tablet-portrait-up {
+            margin-top: 45px;
         }
     }
     &__item {
@@ -138,6 +181,12 @@
         }
         @include for-tablet-landscape-up {
             width: 100%;
+        }
+        @include for-tablet-portrait-up {
+            width: 100%;
+            &:nth-child(2) {
+                display: none;
+            }
         }
     }
     &__descr {

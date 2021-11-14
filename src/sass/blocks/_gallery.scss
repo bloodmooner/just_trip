@@ -93,6 +93,11 @@
         font-size: 20px;
         line-height: 30px;
         font-family: 'Montserrat', sans-serif;
+        @include for-tablet-portrait-up {
+            width: 400px;
+            text-align: center;
+            margin: 0 auto;
+        }
     }
     &__social {
         margin-top: 40px;
@@ -119,12 +124,13 @@
             margin-top: 30px;
             grid-template-columns: 0.35fr 2fr;
             column-gap: 0;
+            margin: 30px auto 0 auto;
         }
     }
     @include for-tablet-landscape-up {
         padding-top: 80px;
     }
     @include for-tablet-portrait-up {
-        padding-top: 80px;
+        padding-top: 40px;
     }
 }

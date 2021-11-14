@@ -9,7 +9,7 @@
             padding-top: 245px;
         }
         @include for-tablet-portrait-up {
-            padding-top: 245px;
+            padding-top: 80px;
         }
     }
     &__head {
@@ -24,6 +24,15 @@
         }
         @include for-tablet-portrait-up {
             width: 100%;
+            display: grid;
+            grid-template-columns: 1fr;
+            row-gap: 30px;
+        }
+        @include for-phone-only {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr;
+            row-gap: 30px;
         }
     }
     &__bottom {
@@ -47,6 +56,12 @@
         font-size: 40px;
         line-height: 58px;
         color: #FF7474;
+        @include for-tablet-portrait-up {
+            text-align: center;
+        }
+        @include for-phone-only {
+            text-align: center;
+        }
     }
     &__menu {
         ul {
@@ -61,6 +76,9 @@
                 font-weight: 500;
                 font-size: 16px;
                 line-height: 30px;
+                @include for-tablet-portrait-up {
+                    font-size: 20px;
+                }
             }
         }
     }
@@ -77,8 +95,16 @@
                 font-weight: 500;
                 font-size: 14px;
                 line-height: 30px;
+                @include for-tablet-portrait-up {
+                    font-size: 17px;
+                }
+            }
+            @include for-tablet-portrait-up {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
             }
         }
+        
     }
     &__social {
         display: flex;
@@ -96,6 +122,6 @@
         min-height: 500px;
     }
     @include for-tablet-portrait-up {
-        min-height: 500px;
+        min-height: 400px;
     }
 }

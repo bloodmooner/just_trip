@@ -69,6 +69,7 @@
         }
         @include for-tablet-portrait-up {
             grid-template-columns: repeat(2, 1fr);
+            column-gap: 30;;
             margin-top: 30px;
         }
     }
@@ -108,5 +109,8 @@
     }
     @include for-tablet-landscape-up {
         padding-top: 150px;
+    }
+    @include for-tablet-portrait-up {
+        padding-top: 155px;
     }
 }
