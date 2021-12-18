@@ -31,11 +31,6 @@
             margin-bottom: 0;
             li {
                 display: inline;
-                color: #ffffff;
-                font-family: 'Montserrat', sans-serif;
-                font-weight: 400;
-                font-size: 18px;
-                margin-bottom: 0;
             }
         }
         @include for-tablet-landscape-up {
@@ -48,21 +43,38 @@
             display: none;
         }
     }
+    &__menu-link {
+        color: #ffffff;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 400;
+        font-size: 18px;
+        margin-bottom: 0;
+        &:hover {
+            color: #ffffff;
+        }
+    }
     &__lang {
         position: relative;
         &-wrapper {
             position: absolute;
-            right: 0;
+            right: -20px;
             top: -13px;
             display: flex;
             justify-content: space-between;
             width: 80px;
+            @include for-desktop-up {
+                right: 0;
+            }
         }
         &-rus, &-en {
             font-family: 'Montserrat', sans-serif;
             font-weight: 400;
             font-size: 18px;
             color: #ffffff;
+            &:hover {
+                color: #ffffff;
+                text-decoration: none;
+            }
         }
         &-en {
             color: #808080;
@@ -74,7 +86,7 @@
     &__wrapper {
         margin-top: 230px;
         display: grid;
-        grid-template-columns: 875px 442px;
+        grid-template-columns: 875px 425px;
         justify-content: space-between;
         @include for-desktop-up {
             grid-template-columns: 2fr 1fr;
@@ -118,6 +130,7 @@
         margin-top: 20px;
         font-family: 'Montserrat', sans-serif;
         font-weight: 400;
+        font-size: 24px;
         color: #ffffff;
         @include for-tablet-portrait-up {
             text-align: center;
@@ -129,16 +142,17 @@
     &__btn {
         margin-top: 60px;
         @include for-tablet-portrait-up {
-            display: block;
+            display: flex;
             margin: 30px auto 0px auto;
         }
         @include for-phone-only {
             width: 100%;
-            display: block;
+            display: flex;
             margin: 30px auto 0px auto;
         }
     }
     &__arrow {
+        display: block;
         margin-top: 150px;
         @include for-tablet-landscape-up {
             margin-top: 90px;
@@ -157,7 +171,7 @@
         position: relative;
         &-wrapper {
             position: absolute;
-            bottom: -180px;
+            bottom: -168px;
             @include for-desktop-up {
                 width: 100%;
             }

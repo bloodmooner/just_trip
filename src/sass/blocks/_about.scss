@@ -4,7 +4,7 @@
     background: url('../../img/about/about_bg.png') no-repeat 50%/cover;
     &__wrapper {
         display: grid;
-        grid-template-columns: 1065px 240px;
+        grid-template-columns: 1065px 222px;
         justify-content: space-between;
         @include for-desktop-up {
             grid-template-columns: 840px 250px;
@@ -33,7 +33,7 @@
         }
     }
     &__text {
-        margin-top: 35px;
+        margin-top: 48px;
         display: grid;
         grid-template-columns: repeat(2, 513px);
         justify-content: space-between;
@@ -73,7 +73,7 @@
         
     }
     &__statistic {
-        margin-top: 80px;
+        margin-top: 115px;
         display: grid;
         grid-template-columns: repeat(4, 237px);
         justify-content: space-between;
@@ -100,7 +100,7 @@
         }
     }
     &__caption {
-        margin-top: 10px;
+        margin-top: 22px;
         font-family: 'Montserrat', sans-serif;
         font-weight: 500;
         font-size: 20px;
@@ -121,7 +121,7 @@
                 margin: 60px auto 0px auto;
             }
             @include for-phone-only {
-                margin-top: 30px;
+                margin-top: 75px;
             }
         }
     }
@@ -139,9 +139,9 @@
         padding-top: 150px;
     }
     @include for-tablet-portrait-up {
-        padding-top: 155px;
+        padding-top: 200px;
     }
     @include for-phone-only {
-        padding-top: 140px;
+        padding-top: 200px;
     }
 }

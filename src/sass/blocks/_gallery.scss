@@ -1,7 +1,7 @@
 .gallery {
     &__wrapper {
         display: grid;
-        grid-template-columns: repeat(3, 514px);
+        grid-template-columns: repeat(3, 500px);
         justify-content: space-between;
         @include for-desktop-up {
             grid-template-columns: repeat(3, 1fr);
@@ -25,7 +25,7 @@
         &:nth-child(1) {
             .gallery__img {
                 &:nth-child(1) {
-                    padding-top: 50px;
+                    padding-top: 128px;
                     padding-bottom: 40px;
                     @include for-tablet-landscape-up {
                         padding-top: 0;
@@ -43,7 +43,7 @@
         &:nth-child(2) {
             .gallery__img {
                 &:nth-child(1) {
-                    padding-top: 120px;
+                    padding-top: 198px;
                     padding-bottom: 40px;
                     @include for-tablet-landscape-up {
                         padding-top: 0;
@@ -60,7 +60,7 @@
         }
         &:nth-child(3) {
             .gallery__img {
-                padding-top: 40px;
+                padding-top: 46px;
                 @include for-tablet-landscape-up {
                     padding-top: 0;
                     padding-bottom: 30px;
@@ -104,6 +104,8 @@
     &__caption {
         width: 370px;
         margin: 0 auto;
+        padding-top: 69px;
+        padding-left: 10px;
         @include for-tablet-landscape-up {
             width: 100%;
         }
@@ -112,7 +114,7 @@
             width: 100%;
         }
         @include for-phone-only {
-            padding-top: 45px;
+            padding-top: 75px;
             width: 290px;
         }
     }
@@ -128,6 +130,7 @@
         }
     }
     &__text {
+        margin-top: 19px;
         width: 370px;
         font-weight: 500;
         font-size: 20px;
@@ -156,7 +159,7 @@
             font-size: 15px;
             color: #c6c6c6;
             line-height: 22px;
-            span {
+            a {
                 color: #FF7474;
             }
             @include for-phone-only {

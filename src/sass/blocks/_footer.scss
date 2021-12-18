@@ -1,10 +1,10 @@
 .footer {
-    min-height: 625px;
+    min-height: 730px;
     background: url('../../img/footer_bg.png') no-repeat 50%/cover;
     position: relative; 
 
     &__wrapper {
-        padding-top: 410px;
+        padding-top: 514px;
         @include for-tablet-landscape-up {
             padding-top: 245px;
         }
@@ -64,6 +64,10 @@
         font-size: 40px;
         line-height: 58px;
         color: #FF7474;
+        &:hover {
+            color: #FF7474;
+            text-decoration: none;
+        }
         @include for-tablet-portrait-up {
             text-align: center;
         }
@@ -78,16 +82,21 @@
             display: flex;
             justify-content: space-between;
             li {
-                font-family: 'Montserrat', sans-serif;
                 display: inline;
-                color: #000000;
-                font-weight: 500;
-                font-size: 16px;
-                line-height: 30px;
-                @include for-tablet-portrait-up {
-                    font-size: 20px;
-                }
             }
+        }
+    }
+    &__menu-link {
+        font-family: 'Montserrat', sans-serif;
+        color: #000000;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 30px;
+        &:hover {
+            color: #000000;
+        }
+        @include for-tablet-portrait-up {
+            font-size: 20px;
         }
     }
     &__links {
@@ -97,19 +106,7 @@
             display: flex;
             justify-content: space-between;
             li {
-                font-family: 'Montserrat', sans-serif;
                 display: inline;
-                color: #000000;
-                font-weight: 500;
-                font-size: 14px;
-                line-height: 30px;
-                @include for-tablet-portrait-up {
-                    font-size: 17px;
-                }
-                @include for-phone-only {
-                    font-size: 17px;
-                    text-align: center;
-                }
             }
             @include for-tablet-portrait-up {
                 display: grid;
@@ -122,6 +119,23 @@
             }
         }
         
+    }
+    &__links-item {
+        font-family: 'Montserrat', sans-serif;
+        color: #000000;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 30px;
+        &:hover {
+            color: #000000;
+        }
+        @include for-tablet-portrait-up {
+            font-size: 17px;
+        }
+        @include for-phone-only {
+            font-size: 17px;
+            text-align: center;
+        }
     }
     &__social {
         display: flex;
@@ -136,6 +150,22 @@
         }
         @include for-phone-only {
             padding: 30px;
+        }
+    }
+    &__social-image {
+        path {
+            fill: #6F6F6F;
+            @include for-tablet-portrait-up {
+                fill: #FF7474;
+            }
+            @include for-phone-only {
+                fill: #FF7474;
+            }
+        }
+        &:hover {
+            path {
+                fill: #FF7474;
+            }
         }
     }
     @include for-tablet-landscape-up {

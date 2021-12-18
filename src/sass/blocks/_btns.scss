@@ -1,4 +1,7 @@
 .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 277px;
     height: 71px;
     background-color: #FF7474;
@@ -6,4 +9,9 @@
     font-weight: 400;
     text-align: center;
     border: none;
+    &:hover {
+        background-color: #ff8181;
+        color: #ffffff;
+        text-decoration: none;
+    }
 }

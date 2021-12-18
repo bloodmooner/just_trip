@@ -2,7 +2,7 @@
     max-width: 1600px;
     min-height: 870px;
     &__bg {
-        padding-top: 150px;
+        padding-top: 230px;
         display: grid;
         grid-template-columns: 940px 403px;
         grid-template-rows: 570px;
@@ -32,7 +32,7 @@
     }
     &__wrapper {
         position: absolute;
-        bottom: 60px;
+        bottom: 73px;
         right: 66px;
         @include for-phone-only {
             left: 50%;
@@ -94,7 +94,7 @@
         }
     }
     &__text {
-        margin-top: 25px;
+        margin-top: 19px;
         font-family: 'Montserrat', sans-serif;
         font-weight: 500;
         font-size: 20px;
@@ -109,7 +109,7 @@
         }
     }
     &__form {
-        margin-top: 35px;
+        margin-top: 56px;
         input {
             font-family: 'Montserrat', sans-serif;
             font-weight: 500;
@@ -128,7 +128,7 @@
         }
     }
     &__btn {
-        margin-top: 55px;
+        margin-top: 35px;
         width: 375px;
         height: 71px;
         font-size: 20px;
